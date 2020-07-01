@@ -1,5 +1,8 @@
 # Inception Wrapper Script
 
+![](https://img.shields.io/badge/Python3-blue)
+![](https://img.shields.io/badge/Docker-orange)
+
 This program saves time for following operations:
 1) Helps in listing micro-services based on datacenter and environment [staging/production/dev]
 2) Helps find server fqdn for micro-services
