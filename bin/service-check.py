@@ -166,7 +166,7 @@ def main():
 
 		service_data = parse_arguments.service[0].split(',')
 		inception_request = inception.Service(parse_arguments.dc, parse_arguments.env)
-		all_service = inception_request.all_service()
+		all_service = inception_request.specific_service()
 		for service in service_data:
 			if service not in all_service:
 				errorout(service, parse_arguments.env)
