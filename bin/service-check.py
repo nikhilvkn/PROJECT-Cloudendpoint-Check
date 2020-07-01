@@ -31,7 +31,7 @@ class RemoteConnect:
 							 username=USERNAME, 
 							 key_filename=KEY, 
 							 timeout=20)
-		except (AuthenticationException,socket.timeout,socket.gaierror):
+		except (AuthenticationException,socket.timeout,socket.gaierror,SSHException):
 			print('SSHConnectionError: Failed to connect server\n')
 			sys.exit()
 
