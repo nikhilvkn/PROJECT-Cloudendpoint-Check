@@ -15,7 +15,8 @@ import os
 KEY = 'xxxx'
 USERNAME = 'xxxx'
 DOCKER_COMMAND = 'docker ps -a --format "table {{.Names}}\t{{.Status}}"'
-ERROR_WORDS = ['DOWN','NOT RUNNING','REBALANCING','UNKNOWN']
+ERROR_WORDS = ['DOWN','NOT RUNNING','REBALANCING','UNKNOWN','UNHEALTHY!']
+STATUS_WORDS = ['UP', 'RUNNING', 'HEALTHY']
 
 
 class RemoteConnect:
