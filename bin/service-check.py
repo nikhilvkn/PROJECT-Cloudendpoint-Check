@@ -66,16 +66,19 @@ class ServicePrint(ServiceCheck):
 		super().__init__(service_name, dc_data, environment)
 
 	def gather_status(self, data):
-		for word in ERROR_WORDS:
-			if word not in str(data):
-				continue
-			else:
+		data = str(data)
+		for content in ERROR_WORDS:
+			if content in data.upper():
 				print('Service Status   : NOT READY')
 				return
-		if 'UP' or 'RUNNING' in str(data):
-			print('Service Status   : UP')
-		else:
-			print(data)
+
+		for content in STATUS_WORDS:
+			if content in data.upper():
+				print('Service Status   : UP')
+				return
+			else:
+				print(data)
+				return
 
 	def info_print(self, data):
 		if data:
